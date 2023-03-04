@@ -13,6 +13,7 @@ public class ImgProducto {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    
     @Column(name = "idimgproducto")
     private int idimgproducto;
     
