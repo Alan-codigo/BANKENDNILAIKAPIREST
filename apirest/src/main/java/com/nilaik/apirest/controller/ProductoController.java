@@ -46,13 +46,12 @@ public class ProductoController {
         }
         productoExistente.setArticulo(producto.getArticulo());
         productoExistente.setMarca(producto.getMarca());
-        productoExistente.setTalla(producto.getTalla());
         productoExistente.setCodigo(producto.getCodigo());
         productoExistente.setColor(producto.getColor());
         productoExistente.setPrecioMayoreo(producto.getPrecioMayoreo());
         productoExistente.setPrecioMenudeo(producto.getPrecioMenudeo());
         productoExistente.setExistencias(producto.getExistencias());
-        productoExistente.setImgproducto_idimgproducto(producto.getImgproducto_idimgproducto());
+        productoExistente.setUrl(producto.getUrl());
         Producto productoActualizado = productoRepository.save(productoExistente);
         return ResponseEntity.ok(productoActualizado);
     }
