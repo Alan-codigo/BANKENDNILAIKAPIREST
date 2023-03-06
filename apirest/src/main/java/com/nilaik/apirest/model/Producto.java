@@ -22,9 +22,6 @@ public class Producto {
     @Column(name = "marca", nullable = false, length = 45)
     private String marca;
     
-    @Column(name = "talla", nullable = false)
-    private Integer talla;
-    
     @Column(name = "codigo", nullable = false, length = 45)
     private String codigo;
     
@@ -40,8 +37,8 @@ public class Producto {
     @Column(name = "existencias", nullable = false)
     private Integer existencias;
     
-    @Column(name = "imgproducto_idimgproducto", nullable = false)
-    private Integer imgproducto_idimgproducto;
+    @Column(name = "url", nullable = false, length = 200)
+    private String url;
     
 
 
@@ -92,14 +89,6 @@ public class Producto {
 		this.marca = marca;
 	}
 
-	public Integer getTalla() {
-		return talla;
-	}
-
-	public void setTalla(Integer talla) {
-		this.talla = talla;
-	}
-
 	public String getCodigo() {
 		return codigo;
 	}
@@ -140,11 +129,11 @@ public class Producto {
 		this.existencias = existencias;
 	}
 
-	public Integer getImgproducto_idimgproducto() {
-		return imgproducto_idimgproducto;
+	public String getUrl() {
+		return url;
 	}
 
-	public void setImgproducto_idimgproducto(Integer imgproducto_idimgproducto) {
-		this.imgproducto_idimgproducto = imgproducto_idimgproducto;
-	}   
+	public void setUrl(String url) {
+		this.url = url;
+	}
 }

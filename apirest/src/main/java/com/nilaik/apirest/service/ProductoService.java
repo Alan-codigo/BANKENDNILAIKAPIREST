@@ -31,13 +31,12 @@ public class ProductoService {
 		if (productoActual != null) {
 			productoActual.setArticulo(producto.getArticulo());
 			productoActual.setMarca(producto.getMarca());
-			productoActual.setTalla(producto.getTalla());
 			productoActual.setCodigo(producto.getCodigo());
 			productoActual.setColor(producto.getColor());
 			productoActual.setPrecioMayoreo(producto.getPrecioMayoreo());
 			productoActual.setPrecioMenudeo(producto.getPrecioMenudeo());
 			productoActual.setExistencias(producto.getExistencias());
-			productoActual.setImgproducto_idimgproducto(producto.getImgproducto_idimgproducto());
+			productoActual.setUrl(producto.getUrl());
 			return productoRepository.save(productoActual);
 		} else {
 			return null;
