@@ -16,14 +16,17 @@ public class Mensaje {
 	@Column(name = "id_mensaje")
 	private int id_mensaje;
 	
-	@Column(name = "textomensaje")
-	private String textomensaje;
+	@Column(name = "nombre")
+	private String nombre;
 	
-	@Column(name = "mailmensaje")
-	private String mailmensaje;
-	
-	@Column(name = "visto")
-	private int visto;
+	@Column(name = "correo")
+	private String correo;
+
+	@Column(name = "telefono")
+	private int telefono;
+
+	@Column(name = "mensaje")
+	private String mensaje;
 	
 	@Column(name = "idmensajecliente")
 	private int idmensajecliente;
@@ -40,28 +43,36 @@ public class Mensaje {
 		this.id_mensaje = id_mensaje;
 	}
 
-	public String getTextomensaje() {
-		return textomensaje;
+	public String getNombre() {
+		return nombre;
 	}
 
-	public void setTextomensaje(String textomensaje) {
-		this.textomensaje = textomensaje;
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
 
-	public String getMailmensaje() {
-		return mailmensaje;
+	public String getCorreo() {
+		return correo;
 	}
 
-	public void setMailmensaje(String mailmensaje) {
-		this.mailmensaje = mailmensaje;
+	public void setCorreo(String correo) {
+		this.correo = correo;
 	}
 
-	public int getVisto() {
-		return visto;
+	public int getTelefono() {
+		return telefono;
 	}
 
-	public void setVisto(int visto) {
-		this.visto = visto;
+	public void setTelefono(int telefono) {
+		this.telefono = telefono;
+	}
+
+	public String getMensaje() {
+		return mensaje;
+	}
+
+	public void setMensaje(String mensaje) {
+		this.mensaje = mensaje;
 	}
 
 	public int getIdmensajecliente() {
