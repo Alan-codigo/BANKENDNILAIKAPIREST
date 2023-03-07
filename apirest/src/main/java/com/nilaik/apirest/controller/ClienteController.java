@@ -68,7 +68,7 @@ public class ClienteController{
         }
     }
 
-    // ME FALTA PROBAT EL DELETE
+    // ME FALTA PROBAR EL DELETE
     @DeleteMapping("/{id}")
     public ResponseEntity<HttpStatus> deleteCliente(@PathVariable("id") int id) {
         try {
@@ -78,4 +78,6 @@ public class ClienteController{
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }
+    
+    //FALTA EL SERVICE
 }

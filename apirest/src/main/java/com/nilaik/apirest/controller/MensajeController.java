@@ -34,6 +34,8 @@ public class MensajeController {
 	Mensaje mensajeguardado = mensajerepository.save(mensaje);
 	return new ResponseEntity<Mensaje>(mensajeguardado, HttpStatus.CREATED);
 	} 
+	
+	//FALTA SERVICE, PUT Y DELETE
 
 	
 }
