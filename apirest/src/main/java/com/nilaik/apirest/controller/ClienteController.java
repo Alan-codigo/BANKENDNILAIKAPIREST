@@ -39,25 +39,28 @@ public class ClienteController {
     public ResponseEntity<Cliente> createCliente(@RequestBody Cliente cliente) {
         try {
             Cliente newCliente = clienteRepository.save(cliente);
+            // Asignar el idCliente al carritoIdCarrito
+            newCliente.setCarritoIdCarrito(newCliente.getIdCliente());
+            clienteRepository.save(newCliente);
             return ResponseEntity.status(HttpStatus.CREATED).body(newCliente);
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
         }
     }
 
+    //FALTA HACER EL PUT CLIETNE JALE
     @PutMapping("/{id}")
     public ResponseEntity<Cliente> updateCliente(@PathVariable("id") int id, @RequestBody Cliente cliente) {
         Optional<Cliente> clienteData = clienteRepository.findById(id);
 
         if (clienteData.isPresent()) {
             Cliente updatedCliente = clienteData.get();
-            updatedCliente.setNombre(cliente.getNombre());
-            updatedCliente.setApellido(cliente.getApellido());
-            updatedCliente.setCorreo(cliente.getCorreo());
-            updatedCliente.setContrasena(cliente.getContrasena());
-            updatedCliente.setNacimiento(cliente.getNacimiento());
-            updatedCliente.setDireccion(cliente.getDireccion());
-            updatedCliente.setCarritoIdCarrito(cliente.getCarritoIdCarrito());
+            updatedCliente.setUsername(cliente.getUsername());
+            updatedCliente.setLastname(cliente.getLastname());
+            updatedCliente.setEmail(cliente.getEmail());
+            updatedCliente.setPassword(cliente.getPassword());
+            updatedCliente.setBorn(cliente.getBorn());
+            updatedCliente.setAdress(cliente.getAdress());
 
             return ResponseEntity.ok(clienteRepository.save(updatedCliente));
         } else {

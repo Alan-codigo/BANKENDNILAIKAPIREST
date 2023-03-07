@@ -18,30 +18,31 @@ public class Cliente {
     @Column(name = "idcliente")
     private int idCliente;
 
-    @Column(name = "nombre", nullable = false, length = 45)
-    private String nombre;
+    @Column(name = "username", nullable = false, length = 45)
+    private String username;
 
-    @Column(name = "apellido", nullable = false, length = 45)
-    private String apellido;
+    @Column(name = "lastname", nullable = false, length = 45)
+    private String lastname;
 
-    @Column(name = "correo", nullable = false, unique = true, length = 150)
-    private String correo;
+    @Column(name = "email", nullable = false, unique = true, length = 150)
+    private String email;
 
-    @Column(name = "contrasena", nullable = false, length = 45)
-    private String contrasena;
+    @Column(name = "password", nullable = false, length = 45)
+    private String password;
 
-    @Column(name = "nacimiento", nullable = false)
-    private Date nacimiento;
+    @Column(name = "born", nullable = false)
+    private String born;
 
-    @Column(name = "direccion", nullable = false, length = 150)
-    private String direccion;
+    @Column(name = "adress", nullable = false, length = 150)
+    private String adress;
 
-    @Column(name = "carrito_idcarrito")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "carrito_idcarrito", nullable = true)
     private int carritoIdCarrito;
 
     public Cliente(){
     }
-    
+
 	public int getIdCliente() {
 		return idCliente;
 	}
@@ -50,52 +51,52 @@ public class Cliente {
 		this.idCliente = idCliente;
 	}
 
-	public String getNombre() {
-		return nombre;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
-	public String getApellido() {
-		return apellido;
+	public String getLastname() {
+		return lastname;
 	}
 
-	public void setApellido(String apellido) {
-		this.apellido = apellido;
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
 	}
 
-	public String getCorreo() {
-		return correo;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setCorreo(String correo) {
-		this.correo = correo;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
-	public String getContrasena() {
-		return contrasena;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setContrasena(String contrasena) {
-		this.contrasena = contrasena;
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	
+	public Date getBorn() {
+		return born;
 	}
 
-	public Date getNacimiento() {
-		return nacimiento;
+	public void setBorn(Date born) {
+		this.born = born;
 	}
 
-	public void setNacimiento(Date nacimiento) {
-		this.nacimiento = nacimiento;
+	public String getAdress() {
+		return adress;
 	}
 
-	public String getDireccion() {
-		return direccion;
-	}
-
-	public void setDireccion(String direccion) {
-		this.direccion = direccion;
+	public void setAdress(String adress) {
+		this.adress = adress;
 	}
 
 	public int getCarritoIdCarrito() {
@@ -105,6 +106,5 @@ public class Cliente {
 	public void setCarritoIdCarrito(int carritoIdCarrito) {
 		this.carritoIdCarrito = carritoIdCarrito;
 	}
-    
     
 }
