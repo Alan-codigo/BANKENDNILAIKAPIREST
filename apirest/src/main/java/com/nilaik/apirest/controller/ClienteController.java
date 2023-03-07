@@ -48,12 +48,12 @@ public class ClienteController{
         }
     }
 
-    //FALTA HACER EL PUT CLIETNE JALE
+
     @PutMapping("/{id}")
     public ResponseEntity<Cliente> updateCliente(@PathVariable("id") int id, @RequestBody Cliente cliente) {
         Optional<Cliente> clienteData = clienteRepository.findById(id);
 
-        if (clienteData.isPresent()) {
+        if (clienteData.isPresent()){
             Cliente updatedCliente = clienteData.get();
             updatedCliente.setUsername(cliente.getUsername());
             updatedCliente.setLastname(cliente.getLastname());
@@ -68,7 +68,7 @@ public class ClienteController{
         }
     }
 
-    // ME FALTA PROBAR EL DELETE
+
     @DeleteMapping("/{id}")
     public ResponseEntity<HttpStatus> deleteCliente(@PathVariable("id") int id) {
         try {
@@ -78,6 +78,5 @@ public class ClienteController{
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }
-    
-    //FALTA EL SERVICE
+
 }

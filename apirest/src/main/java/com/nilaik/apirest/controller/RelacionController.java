@@ -29,5 +29,4 @@ public class RelacionController {
 		return new ResponseEntity<Relacion>(relacionguardada, HttpStatus.CREATED);
 	}
 	
-	//falta service, put y delete
 }

@@ -46,25 +46,6 @@ public class Producto {
     	
     }
     
-    /*
-     * 
-    public Producto(String articulo, String marca, 
-    		Integer talla, String codigo, String color, Integer 
-    		precioMayoreo, Integer precioMenudeo, Integer existencias, 
-    		Integer imgproducto_idimgproducto) {
-        this.articulo = articulo;
-        this.marca = marca;
-        this.talla = talla;
-        this.codigo = codigo;
-        this.color = color;
-        this.precioMayoreo = precioMayoreo;
-        this.precioMenudeo = precioMenudeo;
-        this.existencias = existencias;
-        this.imgproducto_idimgproducto = imgproducto_idimgproducto;
-    }
-     */
-
-
 	public Integer getIdProducto() {
 		return idProducto;
 	}
