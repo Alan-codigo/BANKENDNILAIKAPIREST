@@ -28,4 +28,6 @@ public class RelacionController {
 		Relacion relacionguardada = relacionrepository.save(relacion);
 		return new ResponseEntity<Relacion>(relacionguardada, HttpStatus.CREATED);
 	}
+	
+	//falta service, put y delete
 }
