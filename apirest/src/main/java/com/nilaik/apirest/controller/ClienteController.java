@@ -12,6 +12,7 @@ import com.nilaik.apirest.model.Cliente;
 import com.nilaik.apirest.repository.ClienteRepository;
 
 @RestController
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequestMapping("/clientes")
 public class ClienteController {
 

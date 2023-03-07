@@ -12,6 +12,7 @@ import com.nilaik.apirest.model.Pedido;
 import com.nilaik.apirest.repository.PedidoRepository;
 
 @RestController
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class PedidoController {
 
 	@Autowired
