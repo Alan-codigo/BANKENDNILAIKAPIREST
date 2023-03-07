@@ -12,11 +12,11 @@ import jakarta.persistence.Table;
 public class Carrito {
 	
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "idcarrito")
 	private int id_carrito;
 	
 	@Column(name = "idpedidoactual")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idpedidoactual;
 	
 	Carrito(){
