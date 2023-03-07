@@ -5,4 +5,3 @@ import com.nilaik.apirest.model.Pedido;
 
 public  interface PedidoRepository extends JpaRepository<Pedido, Integer>{
 }
-

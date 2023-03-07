@@ -14,7 +14,7 @@ import com.nilaik.apirest.repository.ClienteRepository;
 @RestController
 @RequestMapping("/clientes")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
-public class ClienteController {
+public class ClienteController{
 
     @Autowired
     ClienteRepository clienteRepository;
@@ -68,6 +68,7 @@ public class ClienteController {
         }
     }
 
+    // ME FALTA PROBAT EL DELETE
     @DeleteMapping("/{id}")
     public ResponseEntity<HttpStatus> deleteCliente(@PathVariable("id") int id) {
         try {
