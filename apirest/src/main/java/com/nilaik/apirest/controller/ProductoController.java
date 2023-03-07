@@ -13,8 +13,8 @@ import com.nilaik.apirest.repository.ProductoRepository;
 import jakarta.validation.Valid;
 
 @RestController
-@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequestMapping("/productos")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class ProductoController {
 
     @Autowired

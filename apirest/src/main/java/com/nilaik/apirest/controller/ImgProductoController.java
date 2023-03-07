@@ -19,8 +19,8 @@ import com.nilaik.apirest.model.ImgProducto;
 import com.nilaik.apirest.repository.ImgProductoRepository;
 
 @RestController
-@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequestMapping("/imgproductos")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class ImgProductoController {
     
     @Autowired
